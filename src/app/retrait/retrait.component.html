@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card-header">
+            <h3 class="mb-0">RETRAIT</h3>
+        </div>
+        <div class="card-body">
+            <form class="form">
+                <div class="form-group">
+                    <label for="">MONTANT-ENVOI</label>
+                    <input [(ngModel)]="retraitData.montantenvoi" name="montantenvoi" type="number" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">NOM-ENVOI</label>
+                    <input [(ngModel)]="retraitData.nomenvoi" type="text" name="nomenvoi" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">PRENOM-ENVOI</label>
+                    <input [(ngModel)]="retraitData.prenomenvoi" type="text" name="prenomenvoi" class="form-control rounded-0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">TELEPHONE-ENVOI</label>
+                    <input [(ngModel)]="retraitData.telephoneenvoi" name="telephoneenvoi" type="number" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">CNI-ENVOI</label>
+                    <input [(ngModel)]="retraitData.CNIenvoi" name="CNIenvoi" type="number" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">NOM-RETRAIT</label>
+                    <input [(ngModel)]="retraitData.nomretrai" name="nomretrai" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">PRENOM-RETRAIT</label>
+                    <input [(ngModel)]="retraitData.prenomretrai" name="prenomretrai" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">TELEPHONE-RETRAIT</label>
+                    <input [(ngModel)]="retraitData.telephoneretrai" name="telephoneretrai" type="number" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">CNI-RETRAIT</label>
+                    <input [(ngModel)]="retraitData.CNIretrai" name="CNIretrai" type="number" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">STATUT</label>
+                    <input [(ngModel)]="retraitData.statut" name="statut" type="text" class="form-control rounded-0" required>
+                </div>
+
+                <button (click)="retrait()" type="button" class="btn btn-primary float-right">RETIRER</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

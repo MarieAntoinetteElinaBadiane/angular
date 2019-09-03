@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card-header">
+            <h3 class="mb-0">USER</h3>
+        </div>
+        <div class="card-body">
+            <form class="form">
+                <div class="form-group">
+                    <label for="">NOM</label>
+                    <input [(ngModel)]="ajoutUserData.nom" name="nom" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">PRENOM</label>
+                    <input [(ngModel)]="ajoutUserData.prenom" type="text" name="prenom" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">STATUT</label>
+                    <input [(ngModel)]="ajoutUserData.statut" type="text" name="statut" class="form-control rounded-0" required>
+                </div>
+                <div class="col s8 offst-2">
+                    <div class="card-panel teal lighten-2">
+                        <h4 class="center white-text">
+                            ImageFile
+                        </h4>
+                    </div>
+                    <div class="input-field col s12">
+                        <img [src]="imageUrl" style="width:250px ; height:200px">
+                        <input type="file" #ImageFile accept="image/*" (change)="handleFileInput($event.target.files)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">USERNAME</label>
+                    <input [(ngModel)]="ajoutUserData.username" name="username" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">PASSWORD</label>
+                    <input [(ngModel)]="ajoutUserData.password" name="password" type="text" class="form-control rounded-0" required>
+                </div>
+
+                <button (click)="ajoutUser()" type="button" class="btn btn-primary float-right">ENREGISTRER</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

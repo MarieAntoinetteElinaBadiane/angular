@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card-header">
+            <h3 class="mb-0">CAISSIER</h3>
+        </div>
+        <div class="card-body">
+            <form class="form">
+                <div class="form-group">
+                    <label for="">NUMEROCOMPTE</label>
+                    <input [(ngModel)]="depotData.numerocompte" name="numerocompte" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                    <label for="">MONTANT</label>
+                    <input [(ngModel)]="depotData.montant" type="number" name="montant" class="form-control rounded-0" required>
+                </div>
+
+                <button (click)="depot()" type="button" class="btn btn-primary float-right">VALIDER</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

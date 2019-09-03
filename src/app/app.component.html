@@ -1,0 +1,39 @@
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink="#" routerLinkActive="active">PROJET WARI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isAdmin()" routerLink="/user" routerLinkActive="active">UTILISATEUR<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isSuperAdmin()" routerLink="/admin" routerLinkActive="active">ADMIN<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isSuperAdmin()" routerLink="/partenaire" routerLinkActive="active">PARTENAIRE<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isCaissier()" routerLink="/depot" routerLinkActive="active">DEPOT<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isUser()" routerLink="/compte" routerLinkActive="active">COMPTE<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" *ngIf="isCaissier()" routerLink="/transaction" routerLinkActive="active">TRANSACTION<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" *ngIf="isCaissier()" routerLink="/retrait" routerLinkActive="active">RETRAIT<span class="sr-only ">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" routerLink="/accueil" routerLinkActive="active">ACCUEIL <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink="/sign-in" routerLinkActive="active">SIGN-IN <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+<router-outlet>
+</router-outlet>
